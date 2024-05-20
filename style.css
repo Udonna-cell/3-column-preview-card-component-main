@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -7,7 +9,10 @@
 
 /* @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap'); */
 
-
+@font-face {
+  font-family: "Big Shoulders Display";
+  src: url("./font/static/BigShouldersDisplay-Regular.ttf");
+}
 
 :root {
   --Bright-orange: hsl(31, 77%, 52%);
@@ -26,14 +31,14 @@ h1 {
   color: var(--Very-light-gray);
   font-family: 'Big Shoulders Display', sans-serif;
   text-transform: uppercase;
-  margin-top: 1rem;
-  font-size: xx-large;
+  margin: 1rem 0;
+  font-size: 47px;
 }
 button {
   background-color: var(--Very-light-gray);
   color: inherit;
   width: 40vw;
-  padding: 1rem;
+  padding: 16px;
   border-radius: 2rem;
   border: none;
   text-transform: capitalize;
@@ -42,19 +47,23 @@ button {
 }
 section.card > div {
     padding: 2.9rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* gap: 2rem; */
     text-wrap: pretty;
 }
 img {
     width: 55px;
 }
+.attribution {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: small;
+}
 p {
   color: var(--Transparent-white);
-  line-height: 1.6rem;
-  font-family: 'Lexend Deca', sans-serif;
-  font-size: 1.1rem;
+  line-height: 21px;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 16px;
 }
 section.card > div:nth-child(1) {
   background-color: var(--Bright-orange);
@@ -72,6 +81,15 @@ section.card > div:nth-child(3) {
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
 }
+button:active,
+button:hover {
+  color: #fff;
+  background-color: transparent;
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: #fff;
+  cursor: pointer;
+}
 
 
 @media (min-width: 767px) {
@@ -80,6 +98,10 @@ section.card > div:nth-child(3) {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+    }
+    p {
+      width: 197px;
     }
     section.card {
         display: flex;
@@ -87,6 +109,7 @@ section.card > div:nth-child(3) {
     }
     section.card > div {
       display: block;
+      max-width: 308px;
     }
     button {
         width: 20vh;
